@@ -11,7 +11,7 @@
   <version>1.1-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>Hello World Web Application</name>
+  <name>Addition Application</name>
   <url>http://www.example.com</url>
 
   <dependencies>
