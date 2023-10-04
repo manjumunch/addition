@@ -42,6 +42,20 @@ pipeline {
             steps {
                 echo 'Hello World'
                 sh 'docker push manju0004/calculation'
+                
+            }
+        }
+        stage('step7 docker remove container') {
+            steps {
+                echo 'Hello World'
+                sh 'docker stop mydockerimage || true'
+                sh 'docker rm mydockerimage || true'
+            }
+        }
+        stage('step8 docker run image') {
+            steps {
+                echo 'Hello World'
+                sh 'docker run -d --name mydockerimage -p 8000:8080 manju0004/calculation'
             }
         }
     }
