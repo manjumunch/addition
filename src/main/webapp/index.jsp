@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Addition in JSP</title>
 </head>
-<body style="background-color: blue;">
+<body style="background-color: green;">
     <h1>Addition of Two Numbers</h1>
 
     <form action="" method="post">
