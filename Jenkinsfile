@@ -5,33 +5,33 @@ pipeline {
         pollSCM('* * * * *')
     }
     stages {
-        stage('step1-clone') {
+        stage('step1 -Clone') {
             steps {
                 echo 'Hello World'
-                git 'https://github.com/manjumunch/addition.git'
+                 git branch: 'main', url: 'https://github.com/manjumunch/addition.git'
             }
         }
-        stage('step2 build') {
+        stage('step2 -build') {
             steps {
                 echo 'Hello World'
                 sh 'yum install maven -y'
                 sh 'mvn clean package'
             }
         }
-        stage('step3 docker build') {
+        stage('step3 -docker build') {
             steps {
                 echo 'Hello World'
                 sh 'docker build -t calculation .'
                 
             }
         }
-        stage('step4 docker login') {
+        stage('step4 -docker login') {
             steps {
                 echo 'Hello World'
                 sh 'docker login -u manju0004 -p manjudock@123'
             }
         }
-        stage('step5 image tag') {
+        stage('step5 -image tag') {
             steps {
                 echo 'Hello World'
                 sh 'docker tag  calculation manju0004/calculation'
